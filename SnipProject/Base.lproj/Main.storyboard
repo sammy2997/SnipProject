@@ -15,8 +15,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design Sustainably" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkn-ig-wO6">
+                                <rect key="frame" x="0.0" y="434" width="414" height="38"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S n i p" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cw-oL-StS">
+                                <rect key="frame" x="100" y="364" width="214" height="50"/>
+                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="50"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screenshot 2021-07-26 at 11.31.36" translatesAutoresizingMaskIntoConstraints="NO" id="YpM-2J-mqJ">
+                                <rect key="frame" x="100" y="194" width="214" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="R5j-A9-49J"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HQ-K5-S0b">
+                                <rect key="frame" x="161" y="635" width="86" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSJ-Jm-GR7">
+                                <rect key="frame" x="143" y="558" width="114" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="HoeflerText-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xkn-ig-wO6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cub-bV-ZsY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xkn-ig-wO6" secondAttribute="trailing" id="D5E-tx-G06"/>
+                            <constraint firstItem="Xkn-ig-wO6" firstAttribute="top" secondItem="1cw-oL-StS" secondAttribute="bottom" constant="20" id="LWB-RT-AIH"/>
+                            <constraint firstItem="1cw-oL-StS" firstAttribute="top" secondItem="YpM-2J-mqJ" secondAttribute="bottom" constant="20" id="Loh-jG-yu8"/>
+                            <constraint firstItem="YpM-2J-mqJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="Uhe-QF-6y0"/>
+                            <constraint firstItem="Xkn-ig-wO6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGE-Su-08b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1cw-oL-StS" secondAttribute="trailing" constant="100" id="VRk-og-JbV"/>
+                            <constraint firstItem="YpM-2J-mqJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdU-OG-evM"/>
+                            <constraint firstAttribute="trailing" secondItem="YpM-2J-mqJ" secondAttribute="trailing" constant="100" id="giz-ON-b6e"/>
+                            <constraint firstItem="1cw-oL-StS" firstAttribute="top" secondItem="YpM-2J-mqJ" secondAttribute="bottom" constant="20" id="lBe-ob-dTM"/>
+                            <constraint firstItem="Xkn-ig-wO6" firstAttribute="top" secondItem="1cw-oL-StS" secondAttribute="bottom" constant="20" id="ms8-83-pgb"/>
+                            <constraint firstItem="1cw-oL-StS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q4T-8g-ezz"/>
+                            <constraint firstItem="YpM-2J-mqJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="tTe-JL-8FP"/>
+                            <constraint firstItem="1cw-oL-StS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="u18-Dz-oQ9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -25,8 +81,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screenshot 2021-07-26 at 11.31.36" width="500" height="436"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
