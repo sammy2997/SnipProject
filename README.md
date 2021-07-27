@@ -1,6 +1,8 @@
 # SnipProject
+About the Application: 
+The Snip App i have created so far has a launch Screen with the logo, App name and motto. So far i have designed the start up screen where you can decided to either sign up or log in. If you click, log in, it will take you to a login screen where you input email and password or sign in with facebook. If you select SignUp, it will take you to the sign up page that will allow you to input name, email and password or give you the option to sign up with facebook.
 
-
+Tech stack: Swift 5.0
 
 
 The Screenshots:
