@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */; };
 		3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */; };
 		3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */; };
-		3C2DA55826AF05BC00A2C734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55726AF05BC00A2C734 /* ViewController.swift */; };
+		3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */; };
 		3C2DA55B26AF05BC00A2C734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA55926AF05BC00A2C734 /* Main.storyboard */; };
 		3C2DA55D26AF05BF00A2C734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */; };
 		3C2DA56026AF05BF00A2C734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA55E26AF05BF00A2C734 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C2DA55026AF05BC00A2C734 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C2DA55726AF05BC00A2C734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		3C2DA55A26AF05BC00A2C734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2DA55F26AF05BF00A2C734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C08DCF226B058BE00C5FECB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3C2DA54726AF05BC00A2C734 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +65,11 @@
 		3C2DA55226AF05BC00A2C734 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
+				3C08DCF226B058BE00C5FECB /* New Group */,
 				3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */,
 				3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */,
-				3C2DA55726AF05BC00A2C734 /* ViewController.swift */,
+				3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */,
+				3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */,
 				3C2DA55926AF05BC00A2C734 /* Main.storyboard */,
 				3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */,
 				3C2DA55E26AF05BF00A2C734 /* LaunchScreen.storyboard */,
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2DA55826AF05BC00A2C734 /* ViewController.swift in Sources */,
+				3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */,
 				3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */,
+				3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */,
 				3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
