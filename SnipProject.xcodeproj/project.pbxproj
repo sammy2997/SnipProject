@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */; };
+		3C08DD3426B0A09100C5FECB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD3326B0A09100C5FECB /* SignInViewController.swift */; };
+		3C08DD3A26B0A58E00C5FECB /* AgeGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */; };
 		3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */; };
 		3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */; };
 		3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3C08DD3326B0A09100C5FECB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGenderViewController.swift; sourceTree = "<group>"; };
 		3C2DA55026AF05BC00A2C734 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +43,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C08DCF226B058BE00C5FECB /* New Group */ = {
+		3C08DCF226B058BE00C5FECB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */,
+				3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */,
+				3C08DD3326B0A09100C5FECB /* SignInViewController.swift */,
+				3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3C08DD3526B0A35900C5FECB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C08DD3726B0A38C00C5FECB /* Custom */,
+				3C08DD3626B0A36100C5FECB /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C08DD3626B0A36100C5FECB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DA55926AF05BC00A2C734 /* Main.storyboard */,
+				3C2DA55E26AF05BF00A2C734 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3C08DD3726B0A38C00C5FECB /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		3C2DA54726AF05BC00A2C734 = {
@@ -65,14 +98,11 @@
 		3C2DA55226AF05BC00A2C734 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
-				3C08DCF226B058BE00C5FECB /* New Group */,
+				3C08DD3526B0A35900C5FECB /* View */,
+				3C08DCF226B058BE00C5FECB /* Controllers */,
 				3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */,
 				3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */,
-				3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */,
-				3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */,
-				3C2DA55926AF05BC00A2C734 /* Main.storyboard */,
 				3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */,
-				3C2DA55E26AF05BF00A2C734 /* LaunchScreen.storyboard */,
 				3C2DA56126AF05BF00A2C734 /* Info.plist */,
 			);
 			path = SnipProject;
@@ -151,7 +181,9 @@
 				3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */,
 				3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */,
 				3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */,
+				3C08DD3426B0A09100C5FECB /* SignInViewController.swift in Sources */,
 				3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */,
+				3C08DD3A26B0A58E00C5FECB /* AgeGenderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
