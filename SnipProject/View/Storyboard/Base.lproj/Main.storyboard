@@ -98,18 +98,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OKo-Vp-3ow">
-                                <rect key="frame" x="20" y="294" width="374" height="40"/>
+                                <rect key="frame" x="20" y="264" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="PTQ-5u-6ng"/>
+                                    <constraint firstAttribute="height" constant="50" id="PTQ-5u-6ng"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfo-um-bZd">
-                                <rect key="frame" x="80" y="498" width="254" height="45"/>
+                                <rect key="frame" x="80" y="488" width="254" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="gbn-gk-byh"/>
+                                    <constraint firstAttribute="height" constant="50" id="gbn-gk-byh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
                                 <state key="normal" title="Facebook">
@@ -117,15 +117,15 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuR-VY-kv7">
-                                <rect key="frame" x="120" y="434" width="174" height="24"/>
+                                <rect key="frame" x="120" y="424" width="174" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gea-Gr-oq2">
-                                <rect key="frame" x="20" y="354" width="374" height="40"/>
+                                <rect key="frame" x="20" y="334" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="aCB-Sa-6nS"/>
+                                    <constraint firstAttribute="height" constant="50" id="aCB-Sa-6nS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -136,7 +136,7 @@
                         <constraints>
                             <constraint firstItem="Nfo-um-bZd" firstAttribute="top" secondItem="fuR-VY-kv7" secondAttribute="bottom" constant="40" id="5Ht-5p-XiF"/>
                             <constraint firstItem="Fit-pm-rRn" firstAttribute="trailing" secondItem="Nfo-um-bZd" secondAttribute="trailing" constant="80" id="8oC-st-YgU"/>
-                            <constraint firstItem="OKo-Vp-3ow" firstAttribute="top" secondItem="Fit-pm-rRn" secondAttribute="top" constant="250" id="M5w-Kq-0j9"/>
+                            <constraint firstItem="OKo-Vp-3ow" firstAttribute="top" secondItem="Fit-pm-rRn" secondAttribute="top" constant="220" id="M5w-Kq-0j9"/>
                             <constraint firstItem="Nfo-um-bZd" firstAttribute="leading" secondItem="Fit-pm-rRn" secondAttribute="leading" constant="80" id="YIZ-6J-BYS"/>
                             <constraint firstItem="Fit-pm-rRn" firstAttribute="trailing" secondItem="OKo-Vp-3ow" secondAttribute="trailing" constant="20" id="bfF-Y2-c3L"/>
                             <constraint firstItem="Fit-pm-rRn" firstAttribute="trailing" secondItem="Gea-Gr-oq2" secondAttribute="trailing" constant="20" id="gi5-ra-Vjn"/>
