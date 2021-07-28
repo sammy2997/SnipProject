@@ -9,6 +9,10 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var firstNameTxt: UITextField!
+    @IBOutlet weak var lastNameTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     
@@ -23,9 +27,25 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpBtn(_ sender: Any) {
+        let st = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "AgeGenderViewController") as! AgeGenderViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func facebookBtn(_ sender: Any) {
     }
     
 }
+
+//extension SignUpViewController: UITextFieldDelegate{
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        
+//        for i in textField.text? {
+//            if i > 10{
+//                
+//            }
+//        }
+//    }
+//    
+//}

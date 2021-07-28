@@ -10,6 +10,9 @@
 		3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */; };
 		3C08DD3426B0A09100C5FECB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD3326B0A09100C5FECB /* SignInViewController.swift */; };
 		3C08DD3A26B0A58E00C5FECB /* AgeGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */; };
+		3C08DD4226B1A5EE00C5FECB /* SnipProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD4126B1A5EE00C5FECB /* SnipProjectTests.swift */; };
+		3C08DD4C26B1A92000C5FECB /* StartUpViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD4B26B1A92000C5FECB /* StartUpViewTests.swift */; };
+		3C08DD4E26B1BD2500C5FECB /* DIYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08DD4D26B1BD2500C5FECB /* DIYViewController.swift */; };
 		3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */; };
 		3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */; };
 		3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA55726AF05BC00A2C734 /* StartUpViewController.swift */; };
@@ -18,10 +21,25 @@
 		3C2DA56026AF05BF00A2C734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA55E26AF05BF00A2C734 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C08DD4426B1A5EE00C5FECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C2DA54826AF05BC00A2C734 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2DA54F26AF05BC00A2C734;
+			remoteInfo = SnipProject;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C08DD3326B0A09100C5FECB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGenderViewController.swift; sourceTree = "<group>"; };
+		3C08DD3F26B1A5EE00C5FECB /* SnipProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C08DD4126B1A5EE00C5FECB /* SnipProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipProjectTests.swift; sourceTree = "<group>"; };
+		3C08DD4326B1A5EE00C5FECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C08DD4B26B1A92000C5FECB /* StartUpViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewTests.swift; sourceTree = "<group>"; };
+		3C08DD4D26B1BD2500C5FECB /* DIYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYViewController.swift; sourceTree = "<group>"; };
 		3C2DA55026AF05BC00A2C734 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C08DD3C26B1A5EE00C5FECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C2DA54D26AF05BC00A2C734 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +75,7 @@
 				3C08DCF326B0599A00C5FECB /* SignUpViewController.swift */,
 				3C08DD3326B0A09100C5FECB /* SignInViewController.swift */,
 				3C08DD3926B0A58E00C5FECB /* AgeGenderViewController.swift */,
+				3C08DD4D26B1BD2500C5FECB /* DIYViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,10 +105,21 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		3C08DD4026B1A5EE00C5FECB /* SnipProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C08DD4126B1A5EE00C5FECB /* SnipProjectTests.swift */,
+				3C08DD4326B1A5EE00C5FECB /* Info.plist */,
+				3C08DD4B26B1A92000C5FECB /* StartUpViewTests.swift */,
+			);
+			path = SnipProjectTests;
+			sourceTree = "<group>";
+		};
 		3C2DA54726AF05BC00A2C734 = {
 			isa = PBXGroup;
 			children = (
 				3C2DA55226AF05BC00A2C734 /* SnipProject */,
+				3C08DD4026B1A5EE00C5FECB /* SnipProjectTests */,
 				3C2DA55126AF05BC00A2C734 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2DA55026AF05BC00A2C734 /* SnipProject.app */,
+				3C08DD3F26B1A5EE00C5FECB /* SnipProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3C08DD3E26B1A5EE00C5FECB /* SnipProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C08DD4626B1A5EE00C5FECB /* Build configuration list for PBXNativeTarget "SnipProjectTests" */;
+			buildPhases = (
+				3C08DD3B26B1A5EE00C5FECB /* Sources */,
+				3C08DD3C26B1A5EE00C5FECB /* Frameworks */,
+				3C08DD3D26B1A5EE00C5FECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C08DD4526B1A5EE00C5FECB /* PBXTargetDependency */,
+			);
+			name = SnipProjectTests;
+			productName = SnipProjectTests;
+			productReference = 3C08DD3F26B1A5EE00C5FECB /* SnipProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3C2DA54F26AF05BC00A2C734 /* SnipProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C2DA56426AF05BF00A2C734 /* Build configuration list for PBXNativeTarget "SnipProject" */;
@@ -137,6 +193,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					3C08DD3E26B1A5EE00C5FECB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3C2DA54F26AF05BC00A2C734;
+					};
 					3C2DA54F26AF05BC00A2C734 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -156,11 +216,19 @@
 			projectRoot = "";
 			targets = (
 				3C2DA54F26AF05BC00A2C734 /* SnipProject */,
+				3C08DD3E26B1A5EE00C5FECB /* SnipProjectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C08DD3D26B1A5EE00C5FECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C2DA54E26AF05BC00A2C734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +242,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C08DD3B26B1A5EE00C5FECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C08DD4C26B1A92000C5FECB /* StartUpViewTests.swift in Sources */,
+				3C08DD4226B1A5EE00C5FECB /* SnipProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C2DA54C26AF05BC00A2C734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +258,7 @@
 				3C2DA55826AF05BC00A2C734 /* StartUpViewController.swift in Sources */,
 				3C2DA55426AF05BC00A2C734 /* AppDelegate.swift in Sources */,
 				3C08DCF426B0599A00C5FECB /* SignUpViewController.swift in Sources */,
+				3C08DD4E26B1BD2500C5FECB /* DIYViewController.swift in Sources */,
 				3C08DD3426B0A09100C5FECB /* SignInViewController.swift in Sources */,
 				3C2DA55626AF05BC00A2C734 /* SceneDelegate.swift in Sources */,
 				3C08DD3A26B0A58E00C5FECB /* AgeGenderViewController.swift in Sources */,
@@ -188,6 +266,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C08DD4526B1A5EE00C5FECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C2DA54F26AF05BC00A2C734 /* SnipProject */;
+			targetProxy = 3C08DD4426B1A5EE00C5FECB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3C2DA55926AF05BC00A2C734 /* Main.storyboard */ = {
@@ -209,6 +295,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3C08DD4726B1A5EE00C5FECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MC38H5VW65;
+				INFOPLIST_FILE = SnipProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelA.SnipProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
+			};
+			name = Debug;
+		};
+		3C08DD4826B1A5EE00C5FECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MC38H5VW65;
+				INFOPLIST_FILE = SnipProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelA.SnipProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
+			};
+			name = Release;
+		};
 		3C2DA56226AF05BF00A2C734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -364,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C08DD4626B1A5EE00C5FECB /* Build configuration list for PBXNativeTarget "SnipProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C08DD4726B1A5EE00C5FECB /* Debug */,
+				3C08DD4826B1A5EE00C5FECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3C2DA54B26AF05BC00A2C734 /* Build configuration list for PBXProject "SnipProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

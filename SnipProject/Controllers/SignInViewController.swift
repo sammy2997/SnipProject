@@ -9,7 +9,9 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var signinBtn: UIButton!
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var facebookSigninBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +20,7 @@ class SignInViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = "Log In"
         
-        signinBtn.layer.cornerRadius = 20
+        facebookSigninBtn.layer.cornerRadius = 20
     }
     
 

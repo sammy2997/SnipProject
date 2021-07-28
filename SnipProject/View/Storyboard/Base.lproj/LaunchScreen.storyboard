@@ -23,13 +23,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design Sustainably" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIE-SV-wXO">
-                                <rect key="frame" x="0.0" y="434" width="414" height="38"/>
+                                <rect key="frame" x="72" y="434" width="270" height="38"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S n i p" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Bw-f5a">
-                                <rect key="frame" x="0.0" y="364" width="414" height="50"/>
+                                <rect key="frame" x="136" y="364" width="142" height="50"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="50"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,14 +39,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NIE-SV-wXO" secondAttribute="bottom" constant="390" id="20i-7s-TXA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVE-Bw-f5a" secondAttribute="trailing" id="B1k-kj-kEa"/>
-                            <constraint firstItem="NIE-SV-wXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GS6-gd-gPI"/>
                             <constraint firstItem="6Ks-LA-3fC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="JJa-R1-lHL"/>
                             <constraint firstItem="6Ks-LA-3fC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Jz1-c5-bBY"/>
                             <constraint firstItem="eVE-Bw-f5a" firstAttribute="top" secondItem="6Ks-LA-3fC" secondAttribute="bottom" constant="20" id="QZE-Oj-JSh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NIE-SV-wXO" secondAttribute="trailing" id="V06-FP-Cfv"/>
                             <constraint firstAttribute="trailing" secondItem="6Ks-LA-3fC" secondAttribute="trailing" constant="100" id="eGd-PC-QRG"/>
-                            <constraint firstItem="eVE-Bw-f5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n75-cU-2nU"/>
                             <constraint firstItem="NIE-SV-wXO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nU7-ZO-gcb"/>
                             <constraint firstItem="6Ks-LA-3fC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="100" id="qse-fb-iFD"/>
                             <constraint firstItem="eVE-Bw-f5a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xFd-sh-9ow"/>
