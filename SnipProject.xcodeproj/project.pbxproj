@@ -48,6 +48,7 @@
 		3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2DA55F26AF05BF00A2C734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2DA56126AF05BF00A2C734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC4C9E826B31B7D00578E23 /* SnipProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnipProject.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 		3C2DA55226AF05BC00A2C734 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
+				3CC4C9E826B31B7D00578E23 /* SnipProject.entitlements */,
 				3C08DD3526B0A35900C5FECB /* View */,
 				3C08DCF226B058BE00C5FECB /* Controllers */,
 				3C2DA55326AF05BC00A2C734 /* AppDelegate.swift */,
@@ -300,7 +302,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC38H5VW65;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,7 +322,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC38H5VW65;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,7 +458,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SnipProject/SnipProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelA.SnipProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devProvisioningProfileSamuelA;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -474,7 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SnipProject/SnipProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelA.SnipProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devProvisioningProfileSamuelA;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

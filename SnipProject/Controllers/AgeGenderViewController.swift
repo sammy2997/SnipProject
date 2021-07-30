@@ -17,7 +17,11 @@ class AgeGenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUp()
+    }
+    
+    func setUp(){
+        title = "Age & Gender".uppercased()
         
         ageBtn.layer.cornerRadius = 20
         genderBtn.layer.cornerRadius = 20

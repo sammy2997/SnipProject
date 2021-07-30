@@ -6,6 +6,8 @@
 //
 
 import UIKit
+/// STEP 4 - import notifications to both app Delegate and main view Controller
+import UserNotifications
 
 class StartUpViewController: UIViewController {
     
@@ -15,17 +17,28 @@ class StartUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        /// STEP 5- For notifications
+        UNUserNotificationCenter.current().delegate = self;
+        
+        setUp()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//    }
+    
+    func setUp(){
         
         signUpBtn.layer.cornerRadius = 20
         signUpBtn.backgroundColor = .blue
         
         loginBtn.layer.cornerRadius = 20
         loginBtn.backgroundColor = .clear
-        
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    
     }
+    
     
     @IBAction func signUpBtn(_ sender: Any) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
@@ -43,8 +56,16 @@ class StartUpViewController: UIViewController {
         
     }
     
+}
+
+/// continued STEP 5 -  add to deal with the notification while app is in foreground
+extension StartUpViewController: UNUserNotificationCenterDelegate {
     
-
-
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        print(notification.request.content.body);
+        completionHandler([.alert, .sound])
+        
+    }
 }
 

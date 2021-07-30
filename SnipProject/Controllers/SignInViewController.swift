@@ -12,17 +12,43 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var facebookSigninBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.title = "Log In"
+       setUp()
+    }
+    
+    func setUp() {
+        navigationController?.isNavigationBarHidden = false
+        title = "log in".uppercased()
         
         facebookSigninBtn.layer.cornerRadius = 20
     }
     
 
 
+}
+
+
+extension  SignInViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "" {
+            return true
+        }
+        
+      
+        if textField == passwordTxt{
+            textField.isSecureTextEntry = true
+//            if textField.text?.count ?? 0 <= 6 {
+//                textField.backgroundColor = UIColor.red
+//            }
+            return true
+        } else {
+            return false
+        }
+         
+    }
+ 
 }

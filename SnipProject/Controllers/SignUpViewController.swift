@@ -19,8 +19,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.title = "Sign Up"
+        setUp()
+    }
+    
+    func setUp(){
+        navigationController?.isNavigationBarHidden = false
+        title = "Sign Up".uppercased()
         
         signUpBtn.layer.cornerRadius = 20
         facebookBtn.layer.cornerRadius = 20
@@ -38,14 +42,25 @@ class SignUpViewController: UIViewController {
     
 }
 
-//extension SignUpViewController: UITextFieldDelegate{
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        
-//        for i in textField.text? {
-//            if i > 10{
-//                
-//            }
-//        }
-//    }
-//    
-//}
+extension  SignUpViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "" {
+            return true
+        }
+       
+        let val  = Int(string)
+        
+        if val != nil {
+            if textField == firstNameTxt && textField == lastNameTxt {
+                textField.backgroundColor = UIColor.lightGray
+            } else {
+                textField.backgroundColor = .clear
+            }
+            return false
+        } else {
+            return true
+        }
+      
+    }
+}

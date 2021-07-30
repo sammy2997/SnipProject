@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// STEP 4 - import notifications to both app Delegate and main view Controller
+import UserNotifications
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /// PUSH NOTIFICATIONS - Step 1
+        ///1.  pop a dialog box to ask user for permission.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+        (granted, error) in
+        guard granted else { return }
+        DispatchQueue.main.async {
+        UIApplication.shared.registerForRemoteNotifications()
+        }
+        }
+        
         return true
     }
 
@@ -31,6 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    /// PUSH NOTIFICATIONS step 2
+    /// 2. Add these 3 functions to register app with APN
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    // 1. Convert device token to string
+        let tokenParts = deviceToken.map { data -> String in
+        return String(format: "%02.2hhx", data)
+    }
+        let token = tokenParts.joined()
+    // 2. Print device token to use for PNs payloads
+        print("Device Token: \(token)")
+        let bundleID = Bundle.main.bundleIdentifier;
+        print("Bundle ID: \(token) \(bundleID)");
+    // 3. Save the token to local storeage and post to app server to generate Push Notification. ...
+    }
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("failed to register for remote notifications: \(error.localizedDescription)")
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("Received push notification: \(userInfo)")
+        let aps = userInfo["aps"] as! [String: Any]
+        print("\(aps)")
+    }
+    
+    /// STEP 3 - enable background task with remote push & push service
+    /// Remote notifications in Background modes in Signing & capabilities (add capability) of project.
+    /// also add push notifications for push service
 }
 
