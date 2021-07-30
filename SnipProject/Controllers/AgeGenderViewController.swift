@@ -32,6 +32,7 @@ class AgeGenderViewController: UIViewController {
     }
     @IBAction func inputGenderBtn(_ sender: Any) {
     }
+    
     @IBAction func skipBtn(_ sender: Any) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(withIdentifier: "DIYViewController") as! DIYViewController

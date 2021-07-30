@@ -9,23 +9,37 @@ import Foundation
 import UIKit
 //import YBTextPicker
 
+/// to register tableView cell programmatically
+class CellClass: UITableViewCell { }
 
 class DIYViewController: UIViewController {
     
-    // attach textfield for PickerView
+    /// attach textfield for PickerView
     @IBOutlet weak var itemsTextField: UITextField!
-    @IBOutlet weak var categoriesTxt: UITextField!
+    @IBOutlet weak var catBtn: UIButton!
     
-    // make array to use in picker
+    /// for select action
+    var selectedButton = UIButton()
+    var dataSource = [String]()
+    
+    /// create an UITableView and Transparent view which will show when the user taps on any of the UIButton.
+    let transparentView = UIView()
+    let tableView = UITableView()
+    
+    /// make array to use in picker
     var diyItems = ["-", "Skirt", "Shirts", "Pants", "Scarfs", "Shoes", "Hats"]
-    
-    var categories = ["-","Garden","Outdoor","Knitting","Art", "Home Decor"]
+
     var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUp()
+        
+//        self.tableView.allowsMultipleSelection = true
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
         
     }
     
@@ -60,6 +74,47 @@ class DIYViewController: UIViewController {
     @objc func donePicker(){
         itemsTextField.resignFirstResponder()
     }
+    
+    /// button action for categories
+    @IBAction func onclickcatBtn(_ sender: Any) {
+        /// update datasource and button reference
+        dataSource = ["Garden","Outdoor","Knitting","Art", "Home Decor"]
+        selectedButton = catBtn
+        
+        /// add transparent table view
+        addTransparentView(frames: catBtn.frame)
+    }
+    
+    /// function to add transparent and table view
+    func addTransparentView(frames: CGRect) {
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+            //UIApplication.shared.keyWindow
+             transparentView.frame = window?.frame ?? self.view.frame
+             self.view.addSubview(transparentView)
+             
+             tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
+             self.view.addSubview(tableView)
+             tableView.layer.cornerRadius = 5
+             
+             transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+             tableView.reloadData()
+             let tapgesture = UITapGestureRecognizer(target: self, action: #selector(removeTransparentView))
+             transparentView.addGestureRecognizer(tapgesture)
+             transparentView.alpha = 0
+             UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+                 self.transparentView.alpha = 0.5
+                 self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height + 5, width: frames.width, height: CGFloat(self.dataSource.count * 50))
+             }, completion: nil)
+         }
+    
+    /// function to remove transparent and table view
+    @objc func removeTransparentView() {
+             let frames = selectedButton.frame
+             UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+                 self.transparentView.alpha = 0
+                 self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
+             }, completion: nil)
+         }
     
 
 }
@@ -99,3 +154,47 @@ extension DIYViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
 }
 
+
+extension DIYViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+       
+        cell.textLabel?.text = dataSource[indexPath.row]
+                
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        /// add checkmark for multiple selection
+        if let cell = tableView.cellForRow(at: indexPath) {
+                    if cell.accessoryType == .checkmark {
+                        cell.accessoryType = .none
+                    } else {
+                        cell.accessoryType = .checkmark
+//                        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+                    }
+                }
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        /// single selection
+//        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+//        removeTransparentView()
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        self.tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+}

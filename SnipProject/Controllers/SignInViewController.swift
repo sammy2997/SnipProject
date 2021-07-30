@@ -17,6 +17,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
 
        setUp()
+        
     }
     
     func setUp() {

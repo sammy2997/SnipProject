@@ -59,7 +59,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llb-t4-41W"/>
                                 </connections>
@@ -370,38 +372,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us your favorite DIY categories!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-tM-b5d">
-                                <rect key="frame" x="78" y="324" width="305" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us your favorite DIY categories!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-tM-b5d">
+                                <rect key="frame" x="50" y="285.5" width="314" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of DIY item do you like?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-QC-Fa4">
-                                <rect key="frame" x="55" y="82" width="305" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of DIY item do you like?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-QC-Fa4">
+                                <rect key="frame" x="50" y="64" width="314" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Select Items" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-w4-hpS">
-                                <rect key="frame" x="102" y="162" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Select Items" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-w4-hpS">
+                                <rect key="frame" x="40" y="151.5" width="334" height="34"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Select Categories" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-3e-YI9">
-                                <rect key="frame" x="111" y="431" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-cO-d9L">
+                                <rect key="frame" x="30" y="373" width="354" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select DIY Categories"/>
+                                <connections>
+                                    <action selector="onclickcatBtn:" destination="fYa-8F-QRO" eventType="touchUpInside" id="nuc-ZM-pUa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LFu-A6-aKP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TMr-cO-d9L" firstAttribute="top" secondItem="DQT-tM-b5d" secondAttribute="bottom" constant="30" id="0Sm-FH-zfn"/>
+                            <constraint firstItem="TMr-cO-d9L" firstAttribute="leading" secondItem="LFu-A6-aKP" secondAttribute="leading" constant="30" id="0Tv-go-iux"/>
+                            <constraint firstItem="LFu-A6-aKP" firstAttribute="trailing" secondItem="pRE-QC-Fa4" secondAttribute="trailing" constant="50" id="2rl-lP-bh4"/>
+                            <constraint firstItem="LFu-A6-aKP" firstAttribute="trailing" secondItem="DQT-tM-b5d" secondAttribute="trailing" constant="50" id="5Zr-zG-k2b"/>
+                            <constraint firstItem="DQT-tM-b5d" firstAttribute="top" secondItem="QYH-w4-hpS" secondAttribute="bottom" constant="100" id="7lz-58-Oqm"/>
+                            <constraint firstItem="QYH-w4-hpS" firstAttribute="leading" secondItem="LFu-A6-aKP" secondAttribute="leading" constant="40" id="9ha-6r-9ui"/>
+                            <constraint firstItem="QYH-w4-hpS" firstAttribute="top" secondItem="pRE-QC-Fa4" secondAttribute="bottom" constant="30" id="DJN-Ii-Gyg"/>
+                            <constraint firstItem="pRE-QC-Fa4" firstAttribute="leading" secondItem="LFu-A6-aKP" secondAttribute="leading" constant="50" id="X5p-V9-Lwu"/>
+                            <constraint firstItem="DQT-tM-b5d" firstAttribute="leading" secondItem="LFu-A6-aKP" secondAttribute="leading" constant="50" id="YXF-96-FA8"/>
+                            <constraint firstItem="LFu-A6-aKP" firstAttribute="trailing" secondItem="QYH-w4-hpS" secondAttribute="trailing" constant="40" id="cIY-86-MA5"/>
+                            <constraint firstItem="LFu-A6-aKP" firstAttribute="trailing" secondItem="TMr-cO-d9L" secondAttribute="trailing" constant="30" id="iYm-OP-Bso"/>
+                            <constraint firstItem="pRE-QC-Fa4" firstAttribute="top" secondItem="LFu-A6-aKP" secondAttribute="top" constant="20" id="pUN-QH-dWm"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="categoriesTxt" destination="e4b-3e-YI9" id="dYG-Iy-AEd"/>
+                        <outlet property="catBtn" destination="TMr-cO-d9L" id="hEt-OE-oSa"/>
                         <outlet property="itemsTextField" destination="QYH-w4-hpS" id="bpa-H6-guW"/>
                     </connections>
                 </viewController>
