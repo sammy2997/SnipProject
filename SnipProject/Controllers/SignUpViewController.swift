@@ -28,6 +28,16 @@ class SignUpViewController: UIViewController {
         
         signUpBtn.layer.cornerRadius = 20
         facebookBtn.layer.cornerRadius = 20
+        
+        /// adds bottom border to textfield through extension of vc
+        borderBottom(txtField: firstNameTxt)
+        borderBottom(txtField: lastNameTxt)
+        borderBottom(txtField: emailTxt)
+        borderBottom(txtField: passwordTxt)
+        
+        /// allow you to show and dimiss keyboard on button tap
+        initializeHideKeyboard()
+        
     }
     
     @IBAction func signUpBtn(_ sender: Any) {

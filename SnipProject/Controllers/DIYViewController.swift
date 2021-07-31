@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-//import YBTextPicker
 
 /// to register tableView cell programmatically
 class CellClass: UITableViewCell { }
@@ -17,6 +16,7 @@ class DIYViewController: UIViewController {
     /// attach textfield for PickerView
     @IBOutlet weak var itemsTextField: UITextField!
     @IBOutlet weak var catBtn: UIButton!
+    @IBOutlet weak var skipBtn: UIButton!
     
     /// for select action
     var selectedButton = UIButton()
@@ -46,6 +46,8 @@ class DIYViewController: UIViewController {
     func setUp(){
         title = "DIY options".uppercased()
         
+        borderBottom(txtField: itemsTextField)
+        
         ///assign delegate and data source for pickerView
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -62,13 +64,18 @@ class DIYViewController: UIViewController {
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
 
-        toolBar.setItems([doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-
         /// assign picker view as input to the textfield
         itemsTextField.inputView = pickerView
         itemsTextField.textAlignment = .center
         itemsTextField.inputAccessoryView = toolBar
+        
+    }
+    
+    @IBAction func onClickSkip(_ sender: Any) {
+        let st = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "ExperienceViewController") as! ExperienceViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func donePicker(){
@@ -174,23 +181,33 @@ extension DIYViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+//        
+//        var data: [String] = []
+//        var new: String = ""
         /// add checkmark for multiple selection
         if let cell = tableView.cellForRow(at: indexPath) {
                     if cell.accessoryType == .checkmark {
                         cell.accessoryType = .none
                     } else {
                         cell.accessoryType = .checkmark
+//                        data.append(dataSource[indexPath.row])
 //                        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
                     }
                 }
         tableView.deselectRow(at: indexPath, animated: true)
+      
+        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
 
         /// single selection
 //        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
 //        tableView.deselectRow(at: indexPath, animated: true)
         
-        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+//        let selectedRows = tableView.indexPathsForSelectedRows
+    
+//        data.append(new)
+//        print(data)
+        
+//        selectedButton.setTitle("\(data)", for: .normal)
 //        removeTransparentView()
     }
     

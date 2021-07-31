@@ -26,6 +26,11 @@ class AgeGenderViewController: UIViewController {
         ageBtn.layer.cornerRadius = 20
         genderBtn.layer.cornerRadius = 20
         skipBtn.layer.cornerRadius = 20
+        
+        borderBottom(txtField: ageTxt)
+        borderBottom(txtField: genderTxt)
+        
+        initializeHideKeyboard()
     }
     
     @IBAction func inputAgeBtn(_ sender: Any) {

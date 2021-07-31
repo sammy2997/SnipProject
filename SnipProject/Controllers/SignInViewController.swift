@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       setUp()
+        setUp()
         
     }
     
@@ -25,6 +25,11 @@ class SignInViewController: UIViewController {
         title = "log in".uppercased()
         
         facebookSigninBtn.layer.cornerRadius = 20
+        
+        borderBottom(txtField: emailTxt)
+        borderBottom(txtField: passwordTxt)
+        
+        initializeHideKeyboard()
     }
     
 
