@@ -28,6 +28,7 @@
 		3C71080126B49A5F003B71D4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71080026B49A5F003B71D4 /* SavedViewController.swift */; };
 		3C71080326B49A6D003B71D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71080226B49A6D003B71D4 /* ProfileViewController.swift */; };
 		3C71080526B4A799003B71D4 /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71080426B4A799003B71D4 /* VCExtension.swift */; };
+		3CE4E95626B83E9F00A63D69 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4E95526B83E9F00A63D69 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		3C71080226B49A6D003B71D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3C71080426B4A799003B71D4 /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		3CC4C9E826B31B7D00578E23 /* SnipProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnipProject.entitlements; sourceTree = "<group>"; };
+		3CE4E95526B83E9F00A63D69 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../Users/King/Desktop/icon.png; sourceTree = "<group>"; };
+		3CE4E95826B83F8700A63D69 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				3C2DA55526AF05BC00A2C734 /* SceneDelegate.swift */,
 				3C2DA55C26AF05BF00A2C734 /* Assets.xcassets */,
 				3C2DA56126AF05BF00A2C734 /* Info.plist */,
+				3CE4E95526B83E9F00A63D69 /* icon.png */,
+				3CE4E95726B83F8400A63D69 /* Icon */,
 			);
 			path = SnipProject;
 			sourceTree = "<group>";
@@ -189,6 +194,14 @@
 				3C71080426B4A799003B71D4 /* VCExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CE4E95726B83F8400A63D69 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				3CE4E95826B83F8700A63D69 /* icon.png */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 				3C2DA56026AF05BF00A2C734 /* LaunchScreen.storyboard in Resources */,
 				3C2DA55D26AF05BF00A2C734 /* Assets.xcassets in Resources */,
 				3C2DA55B26AF05BC00A2C734 /* Main.storyboard in Resources */,
+				3CE4E95626B83E9F00A63D69 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
