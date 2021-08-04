@@ -144,7 +144,16 @@ extension DIYViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         // i used built in sort to sort array alphabetically before returning. changed from let to var to allow this.
         diyItems.sort()
         return diyItems[row]
-       
+
+        
+//        if pickerView == pickerView {
+//                   let row = categories[row]
+//                   return row
+//               } else {
+//                   let row = clothing[row]
+//                   return row
+//               }
+//           }
     }
         
     
@@ -196,7 +205,7 @@ extension DIYViewController: UITableViewDelegate, UITableViewDataSource {
                 }
         tableView.deselectRow(at: indexPath, animated: true)
       
-        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+        return selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
 
         /// single selection
 //        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark

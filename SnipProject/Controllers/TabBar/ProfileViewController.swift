@@ -9,6 +9,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var followersLbl: UILabel!
+    @IBOutlet weak var followingLbl: UILabel!
+    @IBOutlet weak var goalsLbl: UILabel!
+    
+    @IBOutlet weak var scrollViewSection: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
