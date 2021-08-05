@@ -18,6 +18,11 @@ class DIYViewController: UIViewController {
     @IBOutlet weak var catBtn: UIButton!
     @IBOutlet weak var skipBtn: UIButton!
     
+    var final: String = ""
+//    var data: [String] = []
+    var data: Set<String> = []
+    var count = 0
+    
     /// for select action
     var selectedButton = UIButton()
     var dataSource = [String]()
@@ -145,15 +150,6 @@ extension DIYViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         diyItems.sort()
         return diyItems[row]
 
-        
-//        if pickerView == pickerView {
-//                   let row = categories[row]
-//                   return row
-//               } else {
-//                   let row = clothing[row]
-//                   return row
-//               }
-//           }
     }
         
     
@@ -188,35 +184,44 @@ extension DIYViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        var data: [String] = []
-//        var new: String = ""
+        
         /// add checkmark for multiple selection
         if let cell = tableView.cellForRow(at: indexPath) {
                     if cell.accessoryType == .checkmark {
                         cell.accessoryType = .none
+                        count -= 1
+                        
+                        if let index = data.firstIndex(of: dataSource[indexPath.row]) {
+                            data.remove(at: index)
+                            
+                            let joined = data.joined(separator: ", ")
+                            final = joined
+                            
+                        }
                     } else {
-                        cell.accessoryType = .checkmark
-//                        data.append(dataSource[indexPath.row])
-//                        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+                        if count < 3 {
+                            cell.accessoryType = .checkmark
+                            if count == 0 {
+                                final += "\(dataSource[indexPath.row])"
+                            }else {
+                                final += ", \(dataSource[indexPath.row])"
+                            }
+                            count += 1
+                            data.insert("\(dataSource[indexPath.row])")
+                        } else{
+                            cell.accessoryType = .none
+                        }
                     }
                 }
-        tableView.deselectRow(at: indexPath, animated: true)
-      
-        return selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+        
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        return selectedButton.setTitle(final, for: .normal)
 
         /// single selection
 //        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-//        tableView.deselectRow(at: indexPath, animated: true)
         
-//        let selectedRows = tableView.indexPathsForSelectedRows
-    
-//        data.append(new)
-//        print(data)
-        
-//        selectedButton.setTitle("\(data)", for: .normal)
 //        removeTransparentView()
     }
     
