@@ -210,29 +210,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Screenshot 2021-07-26 at 11.31.36" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-hc-Ssn">
-                                <rect key="frame" x="177" y="88" width="74" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-8S-pYc">
-                                <rect key="frame" x="361" y="96" width="33" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" image="magnifyingglass" catalog="system"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4l-LP-GIJ">
-                                <rect key="frame" x="139" y="304" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XeG-GQ-Zg1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="onclickPush" destination="rMl-Ea-Lwi" eventType="touchUpInside" id="gGw-0e-d3o"/>
+                                    <outlet property="dataSource" destination="dxZ-pq-L6f" id="t8h-O5-A7V"/>
+                                    <outlet property="delegate" destination="dxZ-pq-L6f" id="Kyp-lc-n61"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yek-yf-Xq9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yek-yf-Xq9" firstAttribute="trailing" secondItem="XeG-GQ-Zg1" secondAttribute="trailing" id="KAB-f7-vKa"/>
+                            <constraint firstItem="Yek-yf-Xq9" firstAttribute="bottom" secondItem="XeG-GQ-Zg1" secondAttribute="bottom" id="e5z-zv-l5i"/>
+                            <constraint firstItem="XeG-GQ-Zg1" firstAttribute="top" secondItem="Yek-yf-Xq9" secondAttribute="top" id="uQq-Ss-rXu"/>
+                            <constraint firstItem="XeG-GQ-Zg1" firstAttribute="leading" secondItem="Yek-yf-Xq9" secondAttribute="leading" id="yNa-zD-KFD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="H5a-yQ-jPd"/>
+                    <connections>
+                        <outlet property="table" destination="XeG-GQ-Zg1" id="TIy-4K-sPe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V24-pI-QtV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="def-Wh-NQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2523" y="3975"/>
+            <point key="canvasLocation" x="2525" y="4061"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Oxq-nd-B6B">
@@ -942,7 +941,6 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
