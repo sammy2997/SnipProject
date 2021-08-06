@@ -26,9 +26,9 @@ class StartUpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-//    override func viewDidDisappear(_ animated: Bool) {
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-//    }
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     func setUp(){
         
@@ -43,7 +43,7 @@ class StartUpViewController: UIViewController {
     @IBAction func signUpBtn(_ sender: Any) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
-        
+
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -51,7 +51,7 @@ class StartUpViewController: UIViewController {
     @IBAction func loginBtn(_ sender: Any) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(identifier: "SignInViewController") as! SignInViewController
-        
+
         navigationController?.pushViewController(vc, animated: true)
         
     }

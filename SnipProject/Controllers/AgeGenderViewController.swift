@@ -19,6 +19,9 @@ class AgeGenderViewController: UIViewController {
 
         setUp()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
     func setUp(){
         title = "Age & Gender".uppercased()

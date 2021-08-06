@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// import firebase
+import Firebase
+
 /// STEP 4 - import notifications to both app Delegate and main view Controller
 import UserNotifications
 
@@ -28,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         }
         
+        /// **configure firebase app
+        FirebaseApp.configure()
+        /// enabling offline to allow app to work offline and get updates
+//        Database.database().isPersistenceEnabled = true
         return true
     }
     
