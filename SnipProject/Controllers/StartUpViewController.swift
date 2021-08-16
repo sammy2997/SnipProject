@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+
 /// STEP 4 - import notifications to both app Delegate and main view Controller
 import UserNotifications
 
@@ -21,10 +23,12 @@ class StartUpViewController: UIViewController {
         UNUserNotificationCenter.current().delegate = self;
         
         setUp()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)

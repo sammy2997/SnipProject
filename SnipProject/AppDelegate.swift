@@ -9,6 +9,7 @@ import UIKit
 
 /// import firebase
 import Firebase
+import GoogleMobileAds
 
 /// STEP 4 - import notifications to both app Delegate and main view Controller
 import UserNotifications
@@ -35,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         /// enabling offline to allow app to work offline and get updates
 //        Database.database().isPersistenceEnabled = true
+        
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
     

@@ -255,36 +255,22 @@
                             <constraint firstItem="XeG-GQ-Zg1" firstAttribute="leading" secondItem="Yek-yf-Xq9" secondAttribute="leading" id="yNa-zD-KFD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="H5a-yQ-jPd"/>
+                    <navigationItem key="navigationItem" title="Home" id="H5a-yQ-jPd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="EH6-7k-sk9">
+                            <connections>
+                                <action selector="uploadPosts:" destination="rMl-Ea-Lwi" id="uJA-jM-Huc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="messages button" image="message" catalog="system" id="oOq-yt-XFf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="XeG-GQ-Zg1" id="TIy-4K-sPe"/>
+                        <outlet property="uploadBtn" destination="EH6-7k-sk9" id="oIC-WU-IeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V24-pI-QtV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2494.202898550725" y="3340.8482142857142"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="e6E-Qy-fKF">
-            <objects>
-                <viewController id="mcn-z3-nUk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="htQ-Le-k9s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RmY-ta-kb3">
-                                <rect key="frame" x="0.0" y="62" width="414" height="51"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ogY-Vg-ZnQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="def-Wh-NQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2525" y="4061"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Oxq-nd-B6B">
@@ -927,6 +913,7 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

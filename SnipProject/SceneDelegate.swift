@@ -42,10 +42,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else {
             return
         }
-        
+
         // change the root view controller to your specific view controller
         window.rootViewController = vc
-        
+
         // add animation to transition
         UIView.transition(with: window, duration: 0.5, options: [.transitionCrossDissolve], animations: nil, completion: nil)
     }

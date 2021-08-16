@@ -20,6 +20,7 @@ class SignInViewController: UIViewController {
     
     // MARK: Properties
     var handle: AuthStateDidChangeListenerHandle?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +34,20 @@ class SignInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        handle = Auth.auth().addStateDidChangeListener { _, user in
-//          if user == nil {
-//            self.navigationController?.popToRootViewController(animated: true)
-//          } else {
-//            /// perform segue to home when valid
-//            self.performSegue(withIdentifier: self.loginToHome, sender: nil)
-//            self.emailTxt.text = nil
-//            self.passwordTxt.text = nil
-//          }
-//        }
+        handle = Auth.auth().addStateDidChangeListener { _, user in
+          if user == nil {
+            // do nothing- user logs in
+          } else {
+            /// go back to login page
+            let homeVC = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarHomeViewController)
+            
+            self.view.window?.rootViewController = homeVC
+            self.view.window?.makeKeyAndVisible()
+            
+            self.emailTxt.text = nil
+            self.passwordTxt.text = nil
+          }
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -72,6 +77,9 @@ class SignInViewController: UIViewController {
     // MARK: Actions
     @IBAction func loginDidTouch(_ sender: AnyObject) {
         self.loadingInd.startAnimating()
+        
+        ///check if user has 
+        let auth = Auth.auth()
         
         // clear error message
         errorLbl.text = ""

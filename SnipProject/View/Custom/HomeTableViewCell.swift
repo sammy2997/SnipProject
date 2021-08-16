@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeTableViewCell: UITableViewCell {
     
@@ -15,8 +16,11 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var likesLabel: UILabel!
     
+   
+    
     /// static property for identifier for cell
     static let identifier = "HomeTableViewCell"
+    
     
     /// static function to return UINib. need to register cell with this function to use cell in tableView
     static func nib() -> UINib {
@@ -35,11 +39,16 @@ class HomeTableViewCell: UITableViewCell {
     
     
     /// function to configure tableViewCell
-    
     func configure(with model: DiyPosts){
         self.likesLabel.text = "\(model.numberOfLikes) Likes"
         self.usernameLabel.text = model.username
-        self.userImageView.image = UIImage(named: model.userImageName)
-        self.postImageView.image = UIImage(named: model.postImageName)
+        
+        if let url = URL(string: model.userImageName) {
+            self.userImageView.sd_setImage(with: url, completed: nil)
+        }
+        
+        if let url = URL(string: model.postImageName) {
+            self.postImageView.sd_setImage(with: url, completed: nil)
+        }
     }
 }
